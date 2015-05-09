@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="/home/priya/lib/lucene-4.5.0/analysis/common/lucene-analyzers-common-4.5.0.jar"/>
+	<classpathentry kind="lib" path="/home/priya/lib/lucene-4.5.0/core/lucene-core-4.5.0.jar"/>
+	<classpathentry kind="lib" path="/home/priya/lib/lucene-4.5.0/queryparser/lucene-queryparser-4.5.0.jar"/>
+	<classpathentry kind="lib" path="/home/priya/lib/mongo-2.10.1.jar"/>
+	<classpathentry kind="lib" path="/home/priya/lib/ark-tweet-nlp-0.3.2/ark-tweet-nlp-0.3.2.jar"/>
+	<classpathentry kind="lib" path="/home/priya/lib/twitter4j-4.0.3/lib/twitter4j-core-4.0.3.jar"/>
+	<classpathentry kind="lib" path="/home/priya/lib/google-gson-2.2.4/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="/home/priya/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/priya/lib/libsvm.jar"/>
+	<classpathentry kind="lib" path="/home/priya/lib/jsoup-1.8.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

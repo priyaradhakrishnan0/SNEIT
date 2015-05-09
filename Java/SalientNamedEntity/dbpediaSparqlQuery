@@ -1,0 +1,10 @@
+SELECT *
+WHERE
+{
+    ?s ?p ?o .
+    ?o <bif:contains> "'$'"
+    OPTION (score ?sc) .
+    FILTER regex(str(?o), "$", "i")
+}
+ORDER BY DESC (?sc)
+LIMIT 20
