@@ -54,3 +54,32 @@ This will randomly show TSNE dataset samples as
 <Tweet> -- [ranked list of SNEs]
 For each sample, one can enter 1(SNE) or 0(NOT) and system outputs accuracy of TSNE dataset.
 
+SETTING UP SERVERS:
+------------------------------------
+A. SEIMP Annotator Setup
+
+Pre-requisites:
+1. Install latest Java (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+2. Install latest Apache Tomcat Server (http://tomcat.apache.org/).
+3. Download the war file from machine (10.2.4.38) in the path (/var/lib/tomcat8/webapps).
+4. Install latest Mongo DB (https://www.mongodb.org/downloads). Make sure the required collection is already loaded in to the DB. (Access collections from https://github.com/priyaradhakrishnan0/SNEIT/tree/master/Datasets)
+NOTE - All the above listed actions should be performed on the same machine.
+
+Instructions:
+1. Stop the tomcat (if needed).
+2. Copy the war to $TOMCAT_SRC/webapps
+3. Start the tomcat (You should see a new folder with the same name as war getting created)
+4. Hit the following URL in the browser. (http://localhost:8080/SEIMPAnnotator/)
+5. Enter the password 'abracadabra'.
+6. Enjoy!
+
+B. Tweet Linker Setup
+
+Pre-requisites
+1. Install python flask as 'root'
+2. Generate training_data.csv using SNEIT/Java/SalientNamedEntity/src/salience/dataset/TrainingData.java
+3. Download SNEIT/Python/linking/linker.py
+
+Instructions
+1. python linker.py trainVector.csv
+2. Access the linker over the web. Example "http://localhost:5050/classify?feat=1,1,1,1,1,1,1,0"
