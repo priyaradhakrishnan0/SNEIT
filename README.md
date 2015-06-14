@@ -59,27 +59,44 @@ SETTING UP SERVERS:
 A. SEIMP Annotator Setup
 
 Pre-requisites:
-1. Install latest Java (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-2. Install latest Apache Tomcat Server (http://tomcat.apache.org/).
-3. Download the war file from machine (10.2.4.38) in the path (/var/lib/tomcat8/webapps).
-4. Install latest Mongo DB (https://www.mongodb.org/downloads). Make sure the required collection is already loaded in to the DB. (Access collections from https://github.com/priyaradhakrishnan0/SNEIT/tree/master/Datasets)
+  1. Install latest Java (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  
+  2. Install latest Apache Tomcat Server (http://tomcat.apache.org/).
+  3. Download the war file from /SNEIT/bin to the path (/var/lib/tomcat8/webapps).
+  4. Install latest Mongo DB (https://www.mongodb.org/downloads). Make sure the required collection is already loaded in to the DB. (Access collections from https://github.com/priyaradhakrishnan0/SNEIT/tree/master/Datasets)
 NOTE - All the above listed actions should be performed on the same machine.
 
 Instructions:
-1. Stop the tomcat (if needed).
-2. Copy the war to $TOMCAT_SRC/webapps
-3. Start the tomcat (You should see a new folder with the same name as war getting created)
-4. Hit the following URL in the browser. (http://localhost:8080/SEIMPAnnotator/)
-5. Enter the password 'abracadabra'.
-6. Enjoy!
+  1. Stop the tomcat (if needed).
+  2. Copy the war to $TOMCAT_SRC/webapps
+  3. Start the tomcat. sudo service tomcat8 start. (You should see a new folder with the same name as war getting created)
+  4. Hit the following URL in the browser. (http://localhost:8080/SEIMPAnnotator/)
+  5. Enter the password 'abracadabra'.
+  6. Enjoy!
 
 B. Tweet Linker Setup
 
 Pre-requisites
-1. Install python flask as 'root'
-2. Generate training_data.csv using SNEIT/Java/SalientNamedEntity/src/salience/dataset/TrainingData.java
-3. Download SNEIT/Python/linking/linker.py
+  1. Install python flask as 'root'
+  2. Generate training_data.csv using SNEIT/Java/SalientNamedEntity/src/salience/dataset/TrainingData.java
+  3. Download SNEIT/Python/linking/linker.py
 
 Instructions
-1. python linker.py trainVector.csv
-2. Access the linker over the web. Example "http://localhost:5050/classify?feat=1,1,1,1,1,1,1,0"
+  1. python linker.py trainVector.csv
+  2. Access the linker over the web. Example "http://localhost:5050/classify?feat=1,1,1,1,1,1,1,0"
+
+C. NERs -- RESTEntityServer 
+
+Pre-requisites:
+  1. Java 1.8
+  2. Tomcat8
+
+Instructions:
+  1. Copy the RESTEntityServer.war file from the folder /SNEIT/bin to the location '/var/lib/tomcat8/webapps' which is the path of your tomcat.
+  2. Copy the resources folder from the same machine from the location '/SNEIT/resources' and put in the same path of your tomcat.
+  3. Edit the resources/config file (if required). Basically, if you want to point to different server that runs Ritter's NER, you can mention the corresponding property in the file.
+  4. Start the tomcat.
+
+Rest calls:
+  1. http://127.0.0.1:8080/RESTEntityServer/ner/cmu/Obama is here United States
+  2. http://127.0.0.1:8080/RESTEntityServer/ner/stanford/Obama is here United States
+  3. http://127.0.0.1:8080/RESTEntityServer/ner/uow/Obama is here United States
