@@ -10,3 +10,5 @@ CRF_SNE_Mention_Detector_10938_IO.txt - This file contains the samples used in t
 classifier to predict SNE mentions, for IO encoding.
 
 CRF_SNE_Mention_Detector_10938_BIO.txt - This file contains the samples used in the CRF classifier to predict SNE mentions, for BIO encoding.
+
+WorkingSet.txt - This file contains tweets with valid SNE.
