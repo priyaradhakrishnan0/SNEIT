@@ -60,7 +60,7 @@ A. SEIMP Annotator Setup
 
 Pre-requisites:
   1. Install latest Java (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  
-  2. Install latest Apache Tomcat Server (http://tomcat.apache.org/).
+  2. Install latest Apache Tomcat Server (http://tomcat.apache.org/). Here is a good link to do this (https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-14-04)
   3. Download the war file from /SNEIT/bin to the path (/var/lib/tomcat8/webapps).
   4. Install latest Mongo DB (https://www.mongodb.org/downloads). Make sure the required collection is already loaded in to the DB. (Access collections from https://github.com/priyaradhakrishnan0/SNEIT/tree/master/Datasets)
 NOTE - All the above listed actions should be performed on the same machine.
