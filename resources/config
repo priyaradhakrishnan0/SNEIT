@@ -1,0 +1,4 @@
+STOP_WORD_LIST_FILE=resources/ner/stopwordslist.txt
+ARK_TWEET_TAGGER_TRAINING_MODEL=resources/ner/arkTweetModel.20120919
+GET_RITTER_NER_ENDPOINT=http://localhost:5050/extract?tweet
+#GET_RITTER_NER_ENDPOINT=http://10.2.4.21:5050/extract?tweet
