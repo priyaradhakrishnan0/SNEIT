@@ -91,12 +91,12 @@ Pre-requisites:
   2. Tomcat8
 
 Instructions:
-  1. Copy the RESTEntityServer.war file from the folder /SNEIT/bin to the location '/var/lib/tomcat8/webapps' which is the path of your tomcat.
-  2. Copy the resources folder from the same machine from the location '/SNEIT/resources' and put in the same path of your tomcat.
+  1. Copy the RESTEntityServer.war file from the folder /SNEIT/bin to the location CATALINA_HOME'/webapps', where CATALINA_HOME is the path of your tomcat.
+  2. Copy the 'resources' folder from the location '/SNEIT/resources' and put it in 'bin' folder under the tomcat directory specified as CATALINA_HOME.
   3. Edit the resources/config file (if required). Basically, if you want to point to different server that runs Ritter's NER, you can mention the corresponding property in the file.
   4. Start the tomcat.
 
 Rest calls:
-  1. http://127.0.0.1:8080/RESTEntityServer/ner/cmu/Obama is here United States
-  2. http://127.0.0.1:8080/RESTEntityServer/ner/stanford/Obama is here United States
-  3. http://127.0.0.1:8080/RESTEntityServer/ner/uow/Obama is here United States
+  1. http://localhost:8080/RESTEntityServer/ner/cmu/Obama is here United States
+  2. http://localhost:8080/RESTEntityServer/ner/stanford/Obama is here United States
+  3. http://localhost:8080/RESTEntityServer/ner/uow/Obama is here United States
