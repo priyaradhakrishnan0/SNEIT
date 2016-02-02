@@ -78,10 +78,10 @@ B. Tweet Linker Setup
 Pre-requisites
   1. Install python flask as 'root'
   2. Generate training_data.csv using SNEIT/Java/SalientNamedEntity/src/salience/dataset/TrainingData.java
-  3. Download SNEIT/Python/linking/linker.py
+  3. Download SNEIT/Python/linker.py
 
 Instructions
-  1. python linker.py trainVector.csv
+  1. python linker.py
   2. Access the linker over the web. Example "http://localhost:5050/classify?feat=1,1,1,1,1,1,1,0"
 
 C. NERs -- RESTEntityServer 
